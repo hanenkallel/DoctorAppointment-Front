@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         position: "absolute",
         top : "900px",
-        width: "1500px",
+        width: "1078px",
         height: "500px",
         paddingTop : "50px",
         paddingLeft : "10px",
@@ -58,7 +58,6 @@ const Footer = () => {
 
 width: "662px",
 height: "64px",
-
 fontFamily: "Montserrat",
 fontStyle: "normal",
 fontWeight: "normal",
@@ -72,28 +71,16 @@ paddingLeft : " 0px"
 
 
     }
-    const copyright = { 
+const copyright = { 
         /* Rectangle 5 */
 positin : " aboslute ", 
-
 marginTop : " 100px ",
 paddingLeft : "0px",
-width : " 1500px",
-
-
-
-
-    background: "#D9D9D9",
-/* une  question ? Besoin d'aide? Consulter notre aide en ligne ou contactez vous  */
-
-
-
-
+width : " 1078px",
+background: "#D9D9D9",
 fontFamily: "Montserrat",
-
 fontSize: "14px",
 lineHeight: "29px",
-
 color: '#000000'
 
 /* une  question ? Besoin d'aide? Consulter notre aide en ligne ou contactez vous  */
@@ -107,26 +94,18 @@ color: '#000000'
 
 
     }
-    const title = { 
+const title = { 
 
 width: "736px",
 height: "217px",
 left: "22px",
 top: "920px",
-
 fontFamily: "Montserrat",
 fontStyle: "normal",
 fontWeight: "normal",
 fontSize: "18px",
 color: '#000000'
-
-
-
-
-
-
-
-    }
+}
     const classes = useStyles();
     return (
         <div className={classes.root}>

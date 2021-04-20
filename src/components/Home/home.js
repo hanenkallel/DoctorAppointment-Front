@@ -14,7 +14,7 @@ const Home = () => {
 position: "absolute",
 width: "219px",
 height: "212px",
-left: "245px",
+left: "350px",
 top: "510px"
 /* 7062ba839841984630220fe782b10dd2 1 */
 
@@ -27,7 +27,7 @@ top: "510px"
 position: "absolute",
 width: "219px",
 height: "212px",
-left: "526px",
+left: "670px",
 top: "510px"
   }
   const imagedispo= {
@@ -35,7 +35,7 @@ top: "510px"
 position: "absolute",
 width: "219px",
 height: "212px",
-left: "32px",
+left: "50px",
 top: "510px",
 
 
@@ -86,7 +86,7 @@ color: "#000000"
 position: "absolute",
 width: "219px",
 height: "189px",
-left: "35px",
+left: "80px",
 top: "751px",
 
 fontFamily: "Montserrat",
@@ -106,7 +106,7 @@ color: "#000000"
 position: "absolute",
 width: "219px",
 height: "189px",
-left: "290px",
+left: "400px",
 top: "751px",
 
 fontFamily: "Montserrat",
@@ -129,7 +129,7 @@ color: "#000000"
 position: "absolute",
 width: "219px",
 height: "189px",
-left: "538px",
+left: "710px",
 top: "751px",
 
 fontFamily: "Montserrat",

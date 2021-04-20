@@ -25,9 +25,9 @@ const Navbar = (props) => {
         <FlexContainer>
           <Brand />
           <NavLinks style={linkAnimation}>
-            <a href="/">vous etes professionel de santé</a>
-            <a href="/">besoisn d’aide ?</a>
-            <a href="/">se connecter</a>
+            <a href="/">Home</a>
+            <a href="/about/#/about">besoisn d’aide ?</a>
+            <a href="/login">se connecter</a>
            
           </NavLinks>
           <BurgerWrapper>
