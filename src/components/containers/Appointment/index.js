@@ -345,7 +345,7 @@ color: "#00234b",
     background: "#F1F6F8",
 
     
-    width : "1087px" ,
+    width : "1350px" ,
     height : "1000px" ,
     
     border: "0.5px solid #dddddd",
@@ -382,39 +382,35 @@ color: "#00234b",
         </Container>
       </div>
     <Container>
-      <Row>
-        <Col >
-       
-        </Col>
-      </Row>
+  
       <Row>
         <Col>
  
-  <Link key={1} to={`${1}/details/`}>     
+  <Link  to={`${1}/details/`}>     
        <Button  style = {button}> <o style = { o}>08:00</o></Button>
   </Link>
 
-  <Link key={2} to={`${2}/details/`}  >
+  <Link  to={`${2}/details/`}  >
         <Button   style  = {button_9}> <o style = { o}>09:00</o>  </Button>
   </Link>
 
-  <Link key={3} to={`${3}/details/`}>
+  <Link  to={`${3}/details/`}>
         <Button style  = {button_10}> <o style = { o}>10:00</o>  </Button>
   </Link>
-  <Link key={4} to={`${4}/details/`}>
+  <Link  to={`${4}/details/`}>
         <Button style = { button_11} > <o style = { o}>11:00</o>  </Button>
   </Link>
         
-  <Link key={5} to={`${5}/details/`}>
+  <Link  to={`${5}/details/`}>
   <Button style = { button_2} > <o style = { o}>2:00</o>  </Button>
   </Link>
-  <Link key={5} to={`${5}/details/`}>
+  <Link  to={`${5}/details/`}>
   <Button style = { button_3} > <o style = { o}>3:00</o>  </Button>
   </Link>
-  <Link key={5} to={`${5}/details/`}>
+  <Link  to={`${5}/details/`}>
   <Button style = { button_4} > <o style = { o}>4:00</o>  </Button>
   </Link>
-  <Link key={6} to={`${6}/details/`}>
+  <Link  to={`${6}/details/`}>
   <Button style = { button_5} > <o style = { o}>5:00</o>  </Button>
   </Link>
         
@@ -425,7 +421,7 @@ color: "#00234b",
       </Row>
     </Container>
     </div>
-    <Comments></Comments>
+
     </div>
   
    

@@ -21,16 +21,21 @@ import {
   FormControl,
 } from 'react-bootstrap';
 
-const FIRST_NAME = "firstName";
-const LAST_NAME = "lastName";
-const MOBILE_NUMBER = "mobile";
+const nom = "";
+const prenom = "prenom";
+const numTelephone = "numTelephone";
+const emailPatient = "emailPatient"
+
+const dateRdv = "dateRdv"
 
 const AppointmentDetails = ({
   appointments,
   updateAppointment,
 }) => { 
   let { date, month, year, timeFrom} = useParams();
+
   const currentDate = `${date}/${month}/${year}`;
+  console.log(currentDate)
   const history = useHistory();
   const DATA = useMemo(
     () => (appointments && appointments[currentDate]) || {},
@@ -45,17 +50,30 @@ const AppointmentDetails = ({
       {
         ...userDetails,
         [e.target.dataset.type]: e.target.value,
+        dateRdv : currentDate ,
+       
       }
     );
   } 
+
    
   const onClickSave = () => {
+    console.log(currentDate)
+
+
+  
+    fetch ('http://localhost:61778/api/javainuse/savepatient', {
+                method  : 'POST',
+                headers : {'Content-Type': 'application/json' } , 
+                body : JSON.stringify(userDetails),
+            }).then(()=>{console.log('good')})
+            console.log({userDetails})
     let error = false;
     let obj = {
       ...userDetails
     };
 
-    [FIRST_NAME,  MOBILE_NUMBER, LAST_NAME].forEach(
+    [nom,  prenom, numTelephone,emailPatient].forEach(
       detail => { 
         if (!userDetails[detail]) {
           error = true;
@@ -78,6 +96,20 @@ const AppointmentDetails = ({
     updateAppointment(currentDate, timeFrom, obj);
         
     history.goBack();
+
+    setUserDetails(
+      {
+    
+       ...userDetails[nom]= " " , 
+        prenom:" ",
+        numTelephone:"",
+        
+
+
+
+       
+      }
+    );
   }
   const form = {
     position : " relative " ,
@@ -98,46 +130,68 @@ const AppointmentDetails = ({
         <Col>
           <InputGroup className="mb-4">
             <FormControl
-              placeholder="First Name"
-              aria-label="First Name"
-              aria-describedby="First Name"
-              data-type={FIRST_NAME}
+              placeholder="nom"
+              aria-label="NOM"
+              aria-describedby="NOM"
+              data-type={nom}
               onChange={updateFormData}
-              isInvalid={userDetails[FIRST_NAME] === ""}
-              value={userDetails[FIRST_NAME]}
+              isInvalid={userDetails[nom] === ""}
+              value={userDetails[nom]}
             />
+            
             <Form.Control.Feedback className="error" type="invalid">
-              Please enter your first name
+              Please enter your nom
             </Form.Control.Feedback>
           </InputGroup>
+         
+       
           <InputGroup className="mb-4">
             <FormControl
-              placeholder="Last Name"
-              aria-label="Last Name"
-              aria-describedby="Last Name"
-              data-type={LAST_NAME}
+              placeholder="PRENOM"
+              aria-label="prenom"
+              aria-describedby="prenom"
+              data-type={prenom}
               onChange={updateFormData}
-              isInvalid={userDetails[LAST_NAME] === ""}
-              value={userDetails[LAST_NAME]}
+              isInvalid={userDetails[prenom] === ""}
+              value={userDetails[prenom]}
             />
             <Form.Control.Feedback className="error" type="invalid">
               Please enter your last name
             </Form.Control.Feedback>
           </InputGroup>
+          <InputGroup className="mb-4">
+            <FormControl
+              placeholder="EMAIL"
+              aria-label="emailPatient"
+              aria-describedby="emailPatient"
+              data-type={emailPatient}
+              onChange={updateFormData}
+              isInvalid={userDetails[emailPatient] === ""}
+              value={userDetails[emailPatient]}
+            />
+            
+            <Form.Control.Feedback className="error" type="invalid">
+              Please enter your email
+            </Form.Control.Feedback>
+          </InputGroup>
           <InputGroup>
             <FormControl
-              placeholder="Mobile Number"
-              aria-label="First Name"
-              aria-describedby="First Name"
-              data-type={MOBILE_NUMBER}
+              placeholder="numTelephone "
+              aria-label="numTelephone"
+              aria-describedby="numTelephone"
+              data-type={numTelephone}
               onChange={updateFormData}
-              isInvalid={userDetails[MOBILE_NUMBER] === ""}
-              value={userDetails[MOBILE_NUMBER]}
+              isInvalid={userDetails[numTelephone] === ""}
+              value={userDetails[numTelephone]}
             />
+            
             <Form.Control.Feedback className="error" type="invalid">
               Please enter your mobile number
             </Form.Control.Feedback>
           </InputGroup>
+          
+          
+          
         </Col>
       </Row>
       <Row className="buttons">

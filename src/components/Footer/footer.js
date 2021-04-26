@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         position: "absolute",
         top : "900px",
-        width: "1078px",
+        width: "1350px",
         height: "500px",
         paddingTop : "50px",
         paddingLeft : "10px",

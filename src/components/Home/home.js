@@ -144,6 +144,7 @@ color: "#000000"
 
 
   }
+  
   return (
     <div>
     <Image style={imageStyle} src={image} alt="Company Logo" />
