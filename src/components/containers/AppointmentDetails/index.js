@@ -21,7 +21,7 @@ import {
   FormControl,
 } from 'react-bootstrap';
 
-const nom = "";
+const nom = "nom";
 const prenom = "prenom";
 const numTelephone = "numTelephone";
 const emailPatient = "emailPatient"
@@ -62,7 +62,7 @@ const AppointmentDetails = ({
 
 
   
-    fetch ('http://localhost:61778/api/javainuse/savepatient', {
+    fetch ('http://localhost:61701/api/javainuse/savepatient', {
                 method  : 'POST',
                 headers : {'Content-Type': 'application/json' } , 
                 body : JSON.stringify(userDetails),
@@ -101,6 +101,7 @@ const AppointmentDetails = ({
       {
     
        ...userDetails[nom]= " " , 
+       nom:" ",
         prenom:" ",
         numTelephone:"",
         

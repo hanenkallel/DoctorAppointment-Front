@@ -404,13 +404,13 @@ color: "#00234b",
   <Link  to={`${5}/details/`}>
   <Button style = { button_2} > <o style = { o}>2:00</o>  </Button>
   </Link>
-  <Link  to={`${5}/details/`}>
+  <Link  to={`${6}/details/`}>
   <Button style = { button_3} > <o style = { o}>3:00</o>  </Button>
   </Link>
-  <Link  to={`${5}/details/`}>
+  <Link  to={`${7}/details/`}>
   <Button style = { button_4} > <o style = { o}>4:00</o>  </Button>
   </Link>
-  <Link  to={`${6}/details/`}>
+  <Link  to={`${8}/details/`}>
   <Button style = { button_5} > <o style = { o}>5:00</o>  </Button>
   </Link>
         

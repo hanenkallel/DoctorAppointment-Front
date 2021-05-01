@@ -16,6 +16,8 @@ import {
   Switch,
  
 } from 'react-router-dom';
+import admin from './components/admin/admin'
+import Register from './components/register/register.js'
 
 
 
@@ -50,6 +52,9 @@ class App extends Component {
         <Switch>
         <Route exact path="/" component= {Home} />
           <Route path="/about" component= {about} />
+          <Route path="/admin" component= {admin} />
+          <Route path="/register" component= {Register} />
+          
      
        
           <Route path="/:date/:month/:year/:timeFrom/details" component={AppointmentDetails}/>
